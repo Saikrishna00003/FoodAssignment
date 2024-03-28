@@ -1,0 +1,114 @@
+/* Overall Styles */
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #ffe3e2, #ffc9de);
+    margin: 0;
+    padding: 4px;
+    font-family: sans-serif;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #000;
+    margin-right: 20px;
+  }
+  
+  nav a:hover {
+    color: #999;
+  }
+  
+  nav svg {
+    cursor: pointer;
+  }
+  
+  /* Main Content */
+  main {
+    background-image: linear-gradient(to right,rgb(251, 251, 155), pink);
+    
+    display: grid;
+    grid-template-columns: 1fr;  /* Single column by default */
+    gap: 4px;
+    padding: 4px;
+  }
+  
+  @media (min-width: 768px) {
+    main {
+      grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+    }
+  }
+  
+  /* Section 1 */
+  section:first-child {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2.5rem; /* Adjust heading size as needed */
+    margin-bottom: 16px;
+  }
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+  
+  button {
+    background-color: #f05e7e; /* Pink button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #e34d6c; /* Darker pink on hover */
+  }
+  
+  /* Images */
+  img {
+    border-radius: 8px; /* Rounded corners for images */
+    object-fit: cover; /* Ensure images fill their containers */
+  }
+  
+  .grid img:nth-child(odd) {
+    grid-row-start: 1; /* Start odd images on first row */
+  }
+  
+  .grid img:nth-child(even) {
+    grid-row-start: 2; /* Start even images on second row */
+  }
+  
+  /* Section 2 (Pink background) */
+  section:last-child {
+    background-color: #f05e7e;
+    color: white;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  section:last-child h2 {
+    margin-bottom: 10px;
+    
+  }
+  
+  /* Responsive Button Adjustments */
+  @media (max-width: 768px) {
+    button {
+      font-size: 0.8rem;
+      padding: 8px 16px;
+    }
+  }
+  
